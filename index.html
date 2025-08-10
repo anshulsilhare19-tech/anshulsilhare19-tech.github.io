@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>SkyWalker | Welcome</title>
+    <meta name="description" content="A clean, modern, and professional website template built for performance and style.">
+    <meta name="keywords" content="web template, landing page, responsive design, tailwind css">
+    <meta name="author" content="SkyWalker">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://placehold.co/32x32/6366f1/ffffff?text=SW" type="image/png">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#4f46e5',
+                            hover: '#4338ca',
+                        },
+                        secondary: '#111827',
+                        light: '#f9fafb',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Small utility for custom scrollbar, optional but nice */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- ========== HEADER ========== -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-primary">SkyWalker</a>
+            
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-primary transition-colors duration-300">Features</a>
+                <a href="#pricing" class="text-gray-600 hover:text-primary transition-colors duration-300">Pricing</a>
+                <a href="#about" class="text-gray-600 hover:text-primary transition-colors duration-300">About</a>
+                <a href="#contact" class="text-gray-600 hover:text-primary transition-colors duration-300">Contact</a>
+            </div>
+            
+            <!-- CTA Button -->
+            <a href="#contact" class="hidden md:inline-block bg-primary text-white font-semibold px-5 py-2 rounded-lg shadow-md hover:bg-primary-hover transition-all duration-300 transform hover:scale-105">
+                Get Started
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#features" class="block text-gray-600 hover:text-primary transition-colors duration-300">Features</a>
+            <a href="#pricing" class="block text-gray-600 hover:text-primary transition-colors duration-300">Pricing</a>
+            <a href="#about" class="block text-gray-600 hover:text-primary transition-colors duration-300">About</a>
+            <a href="#contact" class="block text-gray-600 hover:text-primary transition-colors duration-300">Contact</a>
+            <a href="#contact" class="block mt-2 bg-primary text-white text-center font-semibold px-5 py-2 rounded-lg shadow-md hover:bg-primary-hover transition-all duration-300">
+                Get Started
+            </a>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="bg-light">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-secondary leading-tight mb-4">Build Your Next Idea Faster</h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">The ultimate starting point for your next project. A modern, responsive, and highly customizable template.</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#features" class="bg-primary text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-primary-hover transition-all duration-300 transform hover:scale-105">
+                        Learn More
+                    </a>
+                    <a href="https://github.com" target="_blank" class="bg-white text-gray-700 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 border border-gray-200">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-secondary">Why Our Template is Awesome</h2>
+                    <p class="text-lg text-gray-500 mt-2">Everything you need to launch your project.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Feature 1 -->
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <div class="bg-primary/10 text-primary w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="m12 9 1.8 3.24a2 2 0 0 0 1.7 1.06h3.8"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Modern Design</h3>
+                        <p class="text-gray-600">Styled with Tailwind CSS for a clean, modern look that's easy to customize.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <div class="bg-primary/10 text-primary w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8v8"/><path d="M9 4v16"/><path d="M13 6v12"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Fully Responsive</h3>
+                        <p class="text-gray-600">Looks great on all devices, from mobile phones to widescreen desktops.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <div class="bg-primary/10 text-primary w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Developer Friendly</h3>
+                        <p class="text-gray-600">Clean, well-commented code that's a pleasure to work with and extend.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="bg-light py-20">
+            <div class="container mx-auto px-6">
+                <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-2xl p-8 md:p-12">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl md:text-4xl font-bold text-secondary">Get In Touch</h2>
+                        <p class="text-lg text-gray-500 mt-2">Have a question or want to work together?</p>
+                    </div>
+                    <form action="#" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all" required>
+                            <input type="email" placeholder="Your Email" class="w-full px-4 py-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all" required>
+                        </div>
+                        <textarea placeholder="Your Message" rows="5" class="w-full px-4 py-3 bg-gray-100 rounded-lg mb-6 focus:outline-none focus:ring-2 focus:ring-primary transition-all" required></textarea>
+                        <button type="submit" class="w-full bg-primary text-white font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-primary-hover transition-all duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-secondary text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About Column -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">SkyWalker</h4>
+                    <p class="text-gray-400">Modern solutions for a digital world. We build beautiful, fast, and user-friendly websites.</p>
+                </div>
+                <!-- Links Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                <!-- Legal Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-3.096 0 1.548 1.548 0 013.096 0zM6.55 8.024H3.456v8.59h3.094V8.024z" clip-rule="evenodd" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 SkyWalker, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
