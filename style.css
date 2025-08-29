@@ -289,3 +289,140 @@ footer {
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
+
+    /* --- NEW STYLES FOR CUSTOMIZATION --- */
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--white-color);
+}
+
+/* Features Section */
+.features {
+    padding: 4rem 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-card {
+    background: var(--dark-color-card);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 174, 255, 0.15);
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 0;
+    background-color: #181818; /* Slightly different background to stand out */
+    border-radius: 10px;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: var(--dark-color-card);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid var(--accent-color);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: var(--light-color-text);
+    margin: 0 0 1rem 0;
+}
+
+.testimonial-card span {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+
+/* Enhanced Footer */
+.site-footer {
+    background: #000;
+    color: var(--secondary-color);
+    padding: 3rem 0 0 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-about, .footer-links {
+    flex: 1;
+    min-width: 250px;
+}
+
+.site-footer h4 {
+    color: var(--white-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+/* --- NEW STYLES FOR IMAGE LOGO --- */
+
+.logo img {
+    height: 40px; /* Control the height of the logo */
+    width: auto;  /* Maintain the aspect ratio */
+    display: block; /* Remove any extra space below the image */
+}
