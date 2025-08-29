@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,28 +26,50 @@
         <h2>Our Awesome Products</h2>
         
         <div class="product-grid">
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1517404215737-04644dc2bad2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxhbmFseXRpY3N8ZW58MHx8fHwxNjk5MjI2NTY3fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Analytics Widget">
-                <h3>Analytics Widget</h3>
-                <p class="price">$19.99</p>
-                <button class="btn add-to-cart" data-product="Analytics Widget" data-price="19.99">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1558522195-e127137878b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Z2FkZ2V0fHx8fHx8MTY5OTk4ODg4Mg&ixlib=rb-4.0.3&q=80&w=1080" alt="Tracking Gadget">
-                <h3>Tracking Gadget</h3>
-                <p class="price">$29.99</p>
-                <button class="btn add-to-cart" data-product="Tracking Gadget" data-price="29.99">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZGF0YXx8fHx8fDE2OTk5ODg5MjU&ixlib=rb-4.0.3&q=80&w=1080" alt="Conversion Gizmo">
-                <h3>Conversion Gizmo</h3>
-                <p class="price">$39.99</p>
-                <button class="btn add-to-cart" data-product="Conversion Gizmo" data-price="39.99">Add to Cart</button>
-            </div>
+    <div class="product-card animated-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="product-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1678120300405-b6d3a84e4f3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Samsung Galaxy S25 Base">
+            <div class="overlay">🚀 Smooth Performance</div>
         </div>
+        <h3>Galaxy S25</h3>
+        <p class="model-desc">The perfect balance of power and style.</p>
+        <p class="price">$799.99</p>
+        <button class="btn add-to-cart" data-product="Galaxy S25 (Base)" data-price="799.99">Add to Cart</button>
+    </div>
 
+    <div class="product-card animated-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="product-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1678120300305-64d4b1a206b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Samsung Galaxy S25 Plus">
+            <div class="overlay">🔋 All-Day Battery</div>
+        </div>
+        <h3>Galaxy S25 Plus</h3>
+        <p class="model-desc">More power, bigger screen, enhanced features.</p>
+        <p class="price">$999.99</p>
+        <button class="btn add-to-cart" data-product="Galaxy S25 Plus" data-price="999.99">Add to Cart</button>
+    </div>
+
+    <div class="product-card animated-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="product-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1678120300481-42792942858b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Samsung Galaxy S25 Edge">
+            <div class="overlay">✨ Sleek Curved Display</div>
+        </div>
+        <h3>Galaxy S25 Edge</h3>
+        <p class="model-desc">Immersive edge display for a captivating view.</p>
+        <p class="price">$1099.99</p>
+        <button class="btn add-to-cart" data-product="Galaxy S25 Edge" data-price="1099.99">Add to Cart</button>
+    </div>
+
+    <div class="product-card animated-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="product-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1678120300587-89843a854a83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Samsung Galaxy S25 Ultra">
+            <div class="overlay">📸 Pro Camera System</div>
+        </div>
+        <h3>Galaxy S25 Ultra</h3>
+        <p class="model-desc">Unleash ultimate performance and photography.</p>
+        <p class="price">$1299.99</p>
+        <button class="btn add-to-cart" data-product="Galaxy S25 Ultra" data-price="1299.99">Add to Cart</button>
+    </div>
+</div>
     </main>
     
 <footer class="site-footer">

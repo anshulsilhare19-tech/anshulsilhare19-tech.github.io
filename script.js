@@ -1,4 +1,4 @@
-// script.js (Upgraded Version)
+// script.js (Upgraded and Final Version)
 document.addEventListener('DOMContentLoaded', function() {
     
     // --- Add to Cart Logic (Upgraded with Quantity) ---
@@ -24,15 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
             
             alert(`${product} has been added to your cart!`);
 
-            // NEW: Handle quantities in the cart
+            // Handle quantities in the cart
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             const existingProductIndex = cart.findIndex(item => item.product === product);
 
             if (existingProductIndex > -1) {
-                // Product exists, increment quantity
                 cart[existingProductIndex].quantity += 1;
             } else {
-                // Product doesn't exist, add it with quantity 1
                 cart.push({ product, price, quantity: 1 });
             }
             localStorage.setItem('cart', JSON.stringify(cart));
@@ -50,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const checkoutBtn = document.getElementById('checkout-btn');
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        cartItemsContainer.innerHTML = ''; // Clear previous content
+        cartItemsContainer.innerHTML = '';
 
         if (cart.length > 0) {
             let total = 0;
@@ -66,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
             cartItemsContainer.innerHTML = itemsHtml;
             checkoutBtn.style.display = 'inline-block';
             
-            // NEW: Save total to localStorage for the thank you page
             localStorage.setItem('cartTotal', total.toFixed(2));
 
         } else {
@@ -75,11 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.removeItem('cartTotal');
         }
         
-        // NEW: Add event listeners for the new "Remove" buttons
         addRemoveListeners();
     }
     
-    // NEW: Function to handle removing items
     function addRemoveListeners() {
         const removeButtons = document.querySelectorAll('.remove-btn');
         removeButtons.forEach(button => {
@@ -87,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const indexToRemove = parseInt(this.dataset.index, 10);
                 let cart = JSON.parse(localStorage.getItem('cart')) || [];
                 
-                // For GA: Send a 'remove_from_cart' event
                 const removedItem = cart[indexToRemove];
                 if (typeof gtag === 'function' && removedItem) {
                     gtag('event', 'remove_from_cart', {
@@ -102,13 +96,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }
                 
-                cart.splice(indexToRemove, 1); // Remove item from array
-                localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
-                renderCart(); // Re-render the cart display
+                cart.splice(indexToRemove, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCart();
             });
         });
     }
-
 
     // --- Checkout Form Logic ---
     const checkoutForm = document.getElementById('checkout-form');
@@ -120,26 +113,33 @@ document.addEventListener('DOMContentLoaded', function() {
                     'event_label': 'User started checkout'
                 });
             }
-            // NOTE: We no longer clear the cart here, we clear it on the thank you page
         });
     }
 
     // --- Thank You Page Logic (Upgraded with Dynamic Value) ---
     if (window.location.pathname.endsWith('thankyou.html')) {
-        const cartTotal = localStorage.getItem('cartTotal'); // Get the final total
+        const cartTotal = localStorage.getItem('cartTotal');
 
         if (typeof gtag === 'function' && cartTotal) {
             gtag('event', 'purchase', {
                 'transaction_id': `T${Math.floor(Math.random() * 10000)}`,
-                'value': parseFloat(cartTotal), // NEW: Use the actual cart total
+                'value': parseFloat(cartTotal),
                 'currency': 'USD',
                 'event_category': 'ecommerce',
                 'event_label': 'Successful Order'
             });
         }
         
-        // Clear cart and total after purchase is tracked
         localStorage.removeItem('cart');
         localStorage.removeItem('cartTotal');
+    }
+
+    // --- NEW: Initialize AOS (Animate On Scroll) ---
+    // This code looks for elements with `data-aos` attributes and animates them.
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800, // Duration of animation in milliseconds
+            once: true,     // Animation happens only once
+        });
     }
 });
