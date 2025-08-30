@@ -1,107 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P5KDGQJ3');</script>
-<!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products | Ansh-Mart</title>
+    <title>Our Products | GA-Commerce</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5KDGQJ3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <header>
         <nav>
-           <a href="index.html" class="logo">
-    <img src="https://i.postimg.cc/3ryjrwzB/logo.png" alt="Ansh-Mart Logo">
-</a>
+            <a href="index.html" class="logo">GA-Commerce</a>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="cart.html">Cart</a></li>
+    <li><a href="account.html">My Account</a></li>
+</ul>
         </nav>
     </header>
 
     <main class="container">
         <h2>Our Awesome Products</h2>
-        
         <div class="product-grid">
-    <div class="product-card animated-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="product-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1678120300405-b6d3a84e4f3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Samsung Galaxy S25 Base">
-            <div class="overlay">🚀 Smooth Performance</div>
+    <!-- Product 1: Galaxy S25 -->
+    <a href="product-detail.html?id=s25" class="product-card-link">
+        <div class="product-card animated-card" data-aos="fade-up">
+            <div class="product-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?..." alt="Samsung Galaxy S25">
+                <div class="overlay">View Details</div>
+            </div>
+            <h3>Galaxy S25</h3>
+            <p class="model-desc">The perfect balance of power and style.</p>
+            <p class="price">$799.99</p>
         </div>
-        <h3>Galaxy S25</h3>
-        <p class="model-desc">The perfect balance of power and style.</p>
-        <p class="price">$799.99</p>
-        <button class="btn add-to-cart" data-product="Galaxy S25 (Base)" data-price="799.99">Add to Cart</button>
-    </div>
-
-    <div class="product-card animated-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="product-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1678120300305-64d4b1a206b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Samsung Galaxy S25 Plus">
-            <div class="overlay">🔋 All-Day Battery</div>
+    </a>
+    <!-- Repeat for S25 Plus, Edge, and Ultra with ids: s25plus, s25edge, s25ultra -->
         </div>
-        <h3>Galaxy S25 Plus</h3>
-        <p class="model-desc">More power, bigger screen, enhanced features.</p>
-        <p class="price">$999.99</p>
-        <button class="btn add-to-cart" data-product="Galaxy S25 Plus" data-price="999.99">Add to Cart</button>
-    </div>
-
-    <div class="product-card animated-card" data-aos="fade-up" data-aos-delay="300">
-        <div class="product-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1678120300481-42792942858b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Samsung Galaxy S25 Edge">
-            <div class="overlay">✨ Sleek Curved Display</div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300" alt="Product 2">
+                <h3>Tracking Gadget</h3>
+                <p class="price">$29.99</p>
+                <button class="btn add-to-cart" data-product="Tracking Gadget" data-price="29.99">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300" alt="Product 3">
+                <h3>Conversion Gizmo</h3>
+                <p class="price">$39.99</p>
+                <button class="btn add-to-cart" data-product="Conversion Gizmo" data-price="39.99">Add to Cart</button>
+            </div>
         </div>
-        <h3>Galaxy S25 Edge</h3>
-        <p class="model-desc">Immersive edge display for a captivating view.</p>
-        <p class="price">$1099.99</p>
-        <button class="btn add-to-cart" data-product="Galaxy S25 Edge" data-price="1099.99">Add to Cart</button>
-    </div>
-
-    <div class="product-card animated-card" data-aos="fade-up" data-aos-delay="400">
-        <div class="product-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1678120300587-89843a854a83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Samsung Galaxy S25 Ultra">
-            <div class="overlay">📸 Pro Camera System</div>
-        </div>
-        <h3>Galaxy S25 Ultra</h3>
-        <p class="model-desc">Unleash ultimate performance and photography.</p>
-        <p class="price">$1299.99</p>
-        <button class="btn add-to-cart" data-product="Galaxy S25 Ultra" data-price="1299.99">Add to Cart</button>
-    </div>
-</div>
     </main>
     
-<footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-about">
-            <h4>Ansh-Mart</h4>
-            <p>The best place to practice your web analytics skills with a fully functional e-commerce template.</p>
-        </div>
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 Ansh-Mart Practice Site. All Rights Reserved.</p>
-    </div>
-</footer>
+    <footer>
+        <p>&copy; 2025 GA-Commerce Practice Site</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
